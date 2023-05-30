@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
 
-public class TCPBestfitQueue {
+public class TCPWorstfitQueue {
 
   public static String recieveMsg(BufferedReader in) {
     String msg = "";
@@ -112,9 +112,9 @@ public class TCPBestfitQueue {
     recieveMsg(in);
     Collections.sort(allServers, (j1, j2) -> {
       if (j1.cores > j2.cores) {
-        return 0;
-      } else {
         return 1;
+      } else {
+        return 0;
       }
     });
 
